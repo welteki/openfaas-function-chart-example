@@ -1,0 +1,10 @@
+---
+apiVersion: openfaas.com/v1
+kind: Function
+metadata:
+  name: marketing-list
+  namespace: openfaas-fn
+spec:
+  name: marketing-list
+  image: {{ .Values.marketingList.image }}
+

@@ -1,0 +1,5 @@
+marketingList:
+  image: welteki/marketing-list:0.1.0
+
+emailNotify:
+  image: welteki/email-notify:0.1.0

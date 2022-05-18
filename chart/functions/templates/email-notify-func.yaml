@@ -1,0 +1,10 @@
+---
+apiVersion: openfaas.com/v1
+kind: Function
+metadata:
+  name: email-notify
+  namespace: openfaas-fn
+spec:
+  name: email-notify
+  image: {{ .Values.emailNotify.image }}
+
