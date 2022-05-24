@@ -64,7 +64,7 @@ metadata:
   namespace: openfaas-fn
 spec:
   name: marketing-list
-  image: {{ Values.marketingList.image }}
+  image: {{ .Values.marketingList.image }}
 ```
 
 You can now change the image name or tag by setting the desired value in the `values.yaml` file.
@@ -126,6 +126,6 @@ Image:  welteki/marketing-list:0.1.1
 
 ## Why would you create a helm chart for functions
 
-- For use with CD tools like Arge and Flux.
+- For use with CD tools like Argo and Flux.
 
     You can have a repo containing the source code and build configuration for functions. Every time a function is updated it is rebuild and published to an image registry. A tool like the [Argo CD Image Updater](https://argocd-image-updater.readthedocs.io/en/v0.1.0/) can check for new version of the container images used by functions and automatically update them to the latest version.
