@@ -1,5 +1,5 @@
 marketingList:
-  image: welteki/marketing-list:0.1.0
+  image: welteki/marketing-list:0.2.0
 
 emailNotify:
-  image: welteki/email-notify:0.1.0
+  image: welteki/email-notify:0.2.0
