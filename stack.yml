@@ -1,0 +1,19 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  marketing-list:
+    lang: node14
+    handler: ./marketing-list
+    image: ${REGISTRY:-docker.io}/${REPO:-welteki}/marketing-list:${TAG:-dev}
+  
+  marketing-notify:
+    lang: node14
+    handler: ./email-notify
+    image: ${REGISTRY:-docker.io}/${REPO:-welteki}/email-notify:${TAG:-dev}
+
+  email-notify:
+    lang: node14
+    handler: ./email-notify
+    image: ${REGISTRY:-docker.io}/${REPO:-welteki}/email-notify:${TAG:-dev}
